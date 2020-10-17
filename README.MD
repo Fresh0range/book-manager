@@ -19,7 +19,7 @@
     -还书
     -查看自己借的书
 ```
-###管理员接口
+### 管理员接口
 * 登录`POST` `localhost:8000/api/admin/user/login`
 ```
 {
@@ -53,7 +53,7 @@
 	"change": -6
 }
 ```
-###普通用户接口
+### 普通用户接口
 * 注册`POST` `localhost:8000/api/user/register`
 ```
 {
