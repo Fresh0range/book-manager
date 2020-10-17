@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/book-manager?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+  jpa:
+    hibernate:
+      ddl-auto: update #自动更新数据库结构
+    show-sql: true #控制台打印sql
+  devtools:
+    restart:
+      enabled: true #设置开启热部署
+      additional-paths: src/main/java #重启目录
+server:
+  port: 8000 #端口
