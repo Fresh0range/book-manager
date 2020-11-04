@@ -18,8 +18,8 @@ public class UserService {
 
     public void register(UserRegisterDTO userRegisterDTO) {
         // 检验用户名是否存在
-        var userName = userRegisterDTO.getUserName();
-        var find = dao.findByUserName(userName);
+        var userName = userRegisterDTO.getUsername();
+        var find = dao.findByUsername(userName);
         if (find != null) {
             throw BusinessExceptions.USERNAME_ALREADY_EXIST;
         }
@@ -32,16 +32,16 @@ public class UserService {
         // 保存用户信息
         var email = userRegisterDTO.getEmail();
         var user = new User();
-        user.setUserName(userName);
+        user.setUsername(userName);
         user.setPassword(DigestUtils.md5DigestAsHex(password.getBytes()));
         user.setEmail(email);
         dao.save(user);
     }
 
     public User login(UserLoginDTO userLoginDTO) {
-        var userName = userLoginDTO.getUserName();
+        var userName = userLoginDTO.getUsername();
         var password = DigestUtils.md5DigestAsHex(userLoginDTO.getPassword().getBytes());
-        var user = dao.findByUserNameAndPassword(userName, password);
+        var user = dao.findByUsernameAndPassword(userName, password);
         if (user == null) {
             throw BusinessExceptions.USERNAME_OR_PASSWORD_ERROR;
         }

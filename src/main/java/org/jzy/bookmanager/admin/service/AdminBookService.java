@@ -1,7 +1,7 @@
 package org.jzy.bookmanager.admin.service;
 
 import org.jzy.bookmanager.admin.dto.AdminBookChangeDTO;
-import org.jzy.bookmanager.admin.repository.AdminBookDAO;
+import org.jzy.bookmanager.admin.dao.AdminBookDAO;
 import org.jzy.bookmanager.exception.BusinessExceptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

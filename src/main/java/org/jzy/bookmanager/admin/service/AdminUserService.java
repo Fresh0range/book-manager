@@ -9,7 +9,7 @@ import java.util.Objects;
 @Service
 public class AdminUserService {
     public void login(AdminUserLoginDTO adminUserLoginDTO) {
-        var userName = adminUserLoginDTO.getUserName();
+        var userName = adminUserLoginDTO.getUsername();
         var password = adminUserLoginDTO.getPassword();
         // 管理员的用户名和密码先固定为admin和admin
         if (!Objects.equals("admin", userName) || !Objects.equals("admin", password)) {

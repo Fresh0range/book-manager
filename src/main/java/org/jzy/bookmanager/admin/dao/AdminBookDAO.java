@@ -1,4 +1,4 @@
-package org.jzy.bookmanager.admin.repository;
+package org.jzy.bookmanager.admin.dao;
 
 import org.jzy.bookmanager.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
