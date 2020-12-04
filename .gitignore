@@ -32,3 +32,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### gradle ###
+.gradle
+gradle
+gradlew
+gradlew.bat
